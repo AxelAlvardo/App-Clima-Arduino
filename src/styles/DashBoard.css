@@ -1,0 +1,106 @@
+.main{
+    background-color: #f2f2f2;
+    overflow: hidden;
+    padding: 50px;
+    height: 100vh;
+}
+
+.main-panel{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
+}
+
+.city{
+    position: relative;
+    
+    &::after{
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 1px;
+        background-color: #e8e5e5;
+        bottom: -10px;
+        left: 0;
+    }
+}
+
+.panel{
+    background-color: white;
+    width: 350px;
+    border-radius: 30px;
+    padding: 30px 50px;
+    border-radius: 30px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05); 
+
+    .img-hm-cont{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        padding: 10px 15px;
+        border-radius: 100%;
+        box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.05) inset; 
+    }
+
+    .img-hm{
+        display: block;
+        margin: 0 auto;
+        width: 30px;
+    }
+
+    .img-wt-cont{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        padding: 15px 13px;
+        border-radius: 100%;
+        box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.05) inset; 
+    }
+
+    .img-wt{
+        width: 30px;
+    }
+    
+    .img-ra{
+        display: block;
+        margin: 0 auto;
+        width: 40px;
+    }
+
+    .img-ra-cont{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        padding: 10px 10px;
+        border-radius: 100%;
+        box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.05) inset; 
+    }
+
+    .img-pt-cont{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        padding: 10px 10px;
+        border-radius: 100%;
+        box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.05) inset; 
+    }
+}
+
+.panel-map{ 
+    height: 260px;
+}
+
+
+.img-loc{
+    width: 60px;
+    position: absolute;
+    top: 0;
+    left: 20px;
+}

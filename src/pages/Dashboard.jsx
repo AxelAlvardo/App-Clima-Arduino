@@ -45,7 +45,7 @@ function Dashboard() {
               <div className="frosted-glass">
                 <img src="./images/group-2.svg" alt="sun" />
                 {/* Aqui va elemento MQTT */}
-                <h1 className="w-full font-normal text-5xl text-center">12°C</h1>
+                <h1 className="w-full font-normal text-5xl text-center">{messages["/sensor/dht_temperatura"]} C°</h1>
                 <h2 className="mt-5 text-2xl text-center">
                   {currentDateTime.day}, <span className="text-gray-400">{currentDateTime.time}</span>
                 </h2>
@@ -72,7 +72,8 @@ function Dashboard() {
             </div>
 
             <div className="mt-6 text-center">
-              <h2 className="mb-5 text-6xl text-gray-400">12 <span className="text-cyan-500">%</span></h2>
+              {/* leer el valor */}
+              <h2 className="mb-5 text-6xl text-gray-400">{messages["/sensor/dht_humedad"]}<span className="text-cyan-500">%</span></h2>
               <h2 className="text-2xl text-gray-400">Normal</h2>
             </div>
           </div>
@@ -90,7 +91,8 @@ function Dashboard() {
             </div>
 
             <div className="mt-6 text-center">
-              <h2 className="mb-5 text-6xl text-gray-400">7.70 <span className="text-yellow-500 text-lg">W/m²</span></h2>
+              {/* LDR */}
+              <h2 className="mb-5 text-6xl text-gray-400">{messages["/sensor/ldr"]}<span className="text-yellow-500 text-lg">W/m²</span></h2>
               <h2 className="text-2xl text-gray-400">FV</h2>
             </div>
           </div>
@@ -111,12 +113,16 @@ function Dashboard() {
             </div>
 
             <div className="mt-6 text-center">
-              <h2 className="mb-5 text-6xl text-gray-400">0.5 <span className="text-blue-400">%</span></h2>
-              <h2 className="text-2xl text-gray-400">Demasiado Baja</h2>
+              {/* Lluvias */}
+              <h2 className="mb-5 text-6xl text-gray-400">
+                {messages["/sensor/rain"] === "true" ? "Lloviendo" : "Seco"}
+              </h2>
+              <h2 className="text-2xl text-gray-400">
+                {messages["/sensor/rain"] === "true" ? "Lleva tu paraguas" : "Día sin lluvia"}
+              </h2>
             </div>
           </div>
         </Fade>
-
 
         <Fade direction="up" duration={1600} delay={600}>
           <div className="panel">
@@ -129,7 +135,8 @@ function Dashboard() {
             </div>
 
             <div className="mt-6 text-center">
-              <h2 className="mb-5 text-6xl text-gray-400">1009 <span className="text-red-600 text-lg">milibares</span></h2>
+              {/* lluvias prt 2 */}
+              <h2 className="mb-5 text-6xl text-gray-400">{messages["/sensor/bmp"]}<span className="text-red-600 text-lg">milibares</span></h2>
               <h2 className="text-2xl text-gray-400">MARN</h2>
             </div>
           </div>

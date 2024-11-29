@@ -113,9 +113,13 @@ function Dashboard() {
             </div>
 
             <div className="mt-6 text-center">
-              {/* lluvias */}
-              <h2 className="mb-5 text-6xl text-gray-400">{messages["/sensor/rain"]}<span className="text-blue-400">%</span></h2>
-              <h2 className="text-2xl text-gray-400">Demasiado Baja</h2>
+              {/* Lluvias */}
+              <h2 className="mb-5 text-6xl text-gray-400">
+                {messages["/sensor/rain"] === "true" ? "Lloviendo" : "Seco"}
+              </h2>
+              <h2 className="text-2xl text-gray-400">
+                {messages["/sensor/rain"] === "true" ? "Lleva tu paraguas" : "Día sin lluvia"}
+              </h2>
             </div>
           </div>
         </Fade>

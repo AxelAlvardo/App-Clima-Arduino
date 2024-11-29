@@ -8,7 +8,7 @@ function App() {
     password: "root", // Contraseña MQTT
   };
 
-  const topics = ["/test/int", "/test/float", "/test/comment", "/test/fotoresistor"]; // Lista de topics a los que se suscribirá
+  const topics = ["/sensor/dht_temperatura", "/sensor/dht_humedad", "/sensor/bmp", "/sensor/ldr", "/sensor/rain"]; // Lista de topics a los que se suscribirá
 
   return (
     <MqttProvider brokerUrl={brokerUrl} options={options} topics={topics}>

@@ -3,6 +3,21 @@
     overflow: hidden;
     padding: 50px;
     height: 100vh;
+
+    background-image: url('/images/wave.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    animation: wave 0.5s ease-in-out;
+}
+
+@keyframes wave{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100%;
+    }
 }
 
 .main-panel{

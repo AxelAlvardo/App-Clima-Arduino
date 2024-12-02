@@ -84,7 +84,7 @@ function Dashboard() {
           <div className="panel">
             <div className="flex items-center gap-5 mr-10">
               <figure className="img-wt-cont">
-                <img src="./images/wt.svg" className="img-wt" alt="humedad" />
+                <img src="./images/dom.png" className="img-wt" alt="humedad" />
               </figure>
 
               <h2 className="text-2xl text-yellow-500">Luz Solar</h2>
@@ -154,17 +154,6 @@ function Dashboard() {
 
       </div>
 
-      {/* Elementos para mostrar los mensajes de los topics suscritos */}
-      {/* <div className="flex flex-wrap justify-center items-center gap-6 w-full">
-          <DashboardElement title={"Char"} value={messages["/test/comment"]} />
-
-          <DashboardElement title={"Integer"} value={messages["/test/int"]} />
-
-          <DashboardElement title={"Float"} value={messages["/test/float"]} />
-
-          <DashboardElement title={"Fotoresistor"} value={messages["/test/fotoresistor"]} />
-
-        </div> */}
     </main>
   );
 }

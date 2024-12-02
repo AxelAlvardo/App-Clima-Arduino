@@ -5,6 +5,7 @@ import { Fade } from 'react-awesome-reveal'
 import '../styles/DashBoard.css';
 import { useEffect, useState } from "react";
 import MapComponent from "../components/MapCompontent";
+import Pronostico from "../components/Pronostico";
 
 
 function Dashboard() {
@@ -141,6 +142,8 @@ function Dashboard() {
             </div>
           </div>
         </Fade>
+
+
       </div>
 
       <div className="flex flex-col gap-8 mt-8 paneles">
@@ -152,7 +155,16 @@ function Dashboard() {
           </div>
         </Fade>
 
+        
+        <Fade direction="up" duration={1600} delay={700}>
+          <div className="flex gap-5 pronostico-div">
+            <Pronostico/>
+          </div>
+        </Fade>
+
       </div>
+
+
 
     </main>
   );
